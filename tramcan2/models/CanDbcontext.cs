@@ -21,9 +21,10 @@ namespace tramcan2.models
        public DbSet<NguonGocHangHoa> nguonGocHangHoas { get; set; }
        public DbSet<ChatLuongHangHoa> chatLuongHangHoas { get; set; }
        public DbSet<TramCan> tramCans { get; set; }
+       public DbSet<TTCanXe> tTCanXes { get; set; }
 
 
-        private const string conn = (@"server=localhost;Port=5432;User Id=postgres;Password=Tranduynhat152001;Database=mydbCan");
+        private const string conn = (@"server=localhost;Port=5432;User Id=postgres;Password=Tranduynhat152001;Database=mydbCan3");
 
         public CanDbcontext()
         {

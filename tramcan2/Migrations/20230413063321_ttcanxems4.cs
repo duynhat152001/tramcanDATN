@@ -1,15 +1,14 @@
-﻿using System;
-using Microsoft.EntityFrameworkCore.Migrations;
+﻿using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace tramcan2.Migrations
 {
-    public partial class ngaycapkh : Migration
+    public partial class ttcanxems4 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AlterColumn<DateTime>(
-                name: "NgayCapKH",
-                table: "KhachHang",
+            migrationBuilder.AlterColumn<string>(
+                name: "KieuCan",
+                table: "TTCanXe",
                 nullable: false,
                 oldClrType: typeof(string),
                 oldType: "text",
@@ -19,11 +18,11 @@ namespace tramcan2.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AlterColumn<string>(
-                name: "NgayCapKH",
-                table: "KhachHang",
+                name: "KieuCan",
+                table: "TTCanXe",
                 type: "text",
                 nullable: true,
-                oldClrType: typeof(DateTime));
+                oldClrType: typeof(string));
         }
     }
 }

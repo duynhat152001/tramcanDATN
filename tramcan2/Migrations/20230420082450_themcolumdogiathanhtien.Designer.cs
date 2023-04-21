@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 using tramcan2.models;
@@ -9,9 +10,10 @@ using tramcan2.models;
 namespace tramcan2.Migrations
 {
     [DbContext(typeof(CanDbcontext))]
-    partial class CanDbcontextModelSnapshot : ModelSnapshot
+    [Migration("20230420082450_themcolumdogiathanhtien")]
+    partial class themcolumdogiathanhtien
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -10,8 +10,8 @@ using tramcan2.models;
 namespace tramcan2.Migrations
 {
     [DbContext(typeof(CanDbcontext))]
-    [Migration("20230408013602_cmnd1")]
-    partial class cmnd1
+    [Migration("20230413063321_ttcanxems4")]
+    partial class ttcanxems4
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -211,6 +211,55 @@ namespace tramcan2.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("NhomUser");
+                });
+
+            modelBuilder.Entity("tramcan2.models.TTCanXe", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<string>("BienSoDauXe")
+                        .HasColumnType("text");
+
+                    b.Property<string>("BienSoDuoiXe")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ChatLuongHH")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Date")
+                        .HasColumnType("text");
+
+                    b.Property<string>("GhiChu")
+                        .HasColumnType("text");
+
+                    b.Property<string>("KhachHang")
+                        .HasColumnType("text");
+
+                    b.Property<string>("KhoHang")
+                        .HasColumnType("text");
+
+                    b.Property<double>("KhoiLuongL1")
+                        .HasColumnType("double precision");
+
+                    b.Property<double>("KhoiLuongL2")
+                        .HasColumnType("double precision");
+
+                    b.Property<string>("KieuCan")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("LoaiHang")
+                        .HasColumnType("text");
+
+                    b.Property<string>("NguonGoc")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TTCanXe");
                 });
 
             modelBuilder.Entity("tramcan2.models.TramCan", b =>

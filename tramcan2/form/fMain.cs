@@ -19,7 +19,8 @@ namespace tramcan2.form
 
         private void runToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            fTTcanxe fm = new fTTcanxe();
+            fm.ShowDialog();
         }
 
         private void càiĐặtCổngCOMToolStripMenuItem_Click(object sender, EventArgs e)
@@ -32,9 +33,48 @@ namespace tramcan2.form
         private void kháchHàngToolStripMenuItem_Click(object sender, EventArgs e)
         {
             fKhachHang fm = new fKhachHang();
-            this.Hide();
             fm.ShowDialog();
-            this.Show();
+
+        }
+
+        private void tàiKhoảnSửDụngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fUser fm = new fUser();
+            fm.ShowDialog();
+        }
+
+        private void hàngHóaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fLoaiHang fm = new fLoaiHang();
+            fm.Show();
+        }
+
+        private void côngTyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void loạiHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fLoaiHang fmLoaiHang = new fLoaiHang();
+            fmLoaiHang.Show();
+        }
+
+        private void khoHàngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fKhoHang fmKhoHang = new fKhoHang();
+            fmKhoHang.Show();
+        }
+
+        private void chấtLượngHàngHóaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            fChatLuongHH fmCLHH = new fChatLuongHH();
+            fmCLHH.Show();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

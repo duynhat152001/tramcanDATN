@@ -13,15 +13,28 @@ namespace tramcan2.models
     {
         [Key]
         public int Id { get; set; }
-        public string Ma { get; set; }
-        public string Name { get; set; }
-        public string Login { get; set; }
-        public string Password { get; set; }
-        public string IdNhomUser { get; set; }
-        public string Description { get; set; }
-        public DateTime Date { get; set; }
+        public string TenLaixe { get; set; }
+        public string KhachHang { get; set; }
+        public string LoaiHang { get; set; }
+        public string KhoHang { get; set; }
+        public string NguonGoc { get; set; }
+        
+        public string KieuCan { get; set; }
+        public string ChatLuongHH { get; set; }
+        
         public string BienSoDauXe { get; set; }
+        
         public string BienSoDuoiXe { get; set; }
+
         public double KhoiLuongL1 { get; set; }
+        public double KhoiLuongL2 { get; set; }
+        public double KhoiLuongHang { get; set; }
+        public string ThoiGianCanL1 { get; set; }
+        public string ThoiGianCanL2 { get; set; }
+        public float DonGia { get; set; }
+        public float ThanhTien { get; set; }
+        public string GhiChu { get; set; }
+
+
     }
 }

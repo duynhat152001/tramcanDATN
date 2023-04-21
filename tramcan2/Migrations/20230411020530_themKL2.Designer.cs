@@ -10,8 +10,8 @@ using tramcan2.models;
 namespace tramcan2.Migrations
 {
     [DbContext(typeof(CanDbcontext))]
-    [Migration("20230408015407_ngaycapkh")]
-    partial class ngaycapkh
+    [Migration("20230411020530_themKL2")]
+    partial class themKL2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -85,8 +85,8 @@ namespace tramcan2.Migrations
                     b.Property<string>("GhiChu")
                         .HasColumnType("text");
 
-                    b.Property<DateTime>("NgayCapKH")
-                        .HasColumnType("timestamp without time zone");
+                    b.Property<string>("NgayCapKH")
+                        .HasColumnType("text");
 
                     b.Property<string>("NoiCapKH")
                         .HasColumnType("text");
@@ -211,6 +211,51 @@ namespace tramcan2.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("NhomUser");
+                });
+
+            modelBuilder.Entity("tramcan2.models.TTCanXe", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<string>("BienSoDauXe")
+                        .HasColumnType("text");
+
+                    b.Property<string>("BienSoDuoiXe")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Date")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Description")
+                        .HasColumnType("text");
+
+                    b.Property<string>("IdNhomUser")
+                        .HasColumnType("text");
+
+                    b.Property<double>("KhoiLuongL1")
+                        .HasColumnType("double precision");
+
+                    b.Property<double>("KhoiLuongL2")
+                        .HasColumnType("double precision");
+
+                    b.Property<string>("Login")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Ma")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Password")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TTCanXe");
                 });
 
             modelBuilder.Entity("tramcan2.models.TramCan", b =>

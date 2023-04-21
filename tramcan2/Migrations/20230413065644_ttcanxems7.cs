@@ -2,21 +2,21 @@
 
 namespace tramcan2.Migrations
 {
-    public partial class themghichu : Migration
+    public partial class ttcanxems7 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.AddColumn<string>(
-                name: "GhiChu",
-                table: "NhomUser",
+                name: "TenLaixe",
+                table: "TTCanXe",
                 nullable: true);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
-                name: "GhiChu",
-                table: "NhomUser");
+                name: "TenLaixe",
+                table: "TTCanXe");
         }
     }
 }

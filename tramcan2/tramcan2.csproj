@@ -16,6 +16,21 @@
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -94,6 +109,9 @@
     <Reference Include="Microsoft.Extensions.Primitives, Version=3.1.32.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.Primitives.3.1.32\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
     </Reference>
+    <Reference Include="NinjaNye.SearchExtensions, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\NinjaNye.SearchExtensions.3.0.1\lib\net45\NinjaNye.SearchExtensions.dll</HintPath>
+    </Reference>
     <Reference Include="Npgsql, Version=4.1.12.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
       <HintPath>..\packages\Npgsql.4.1.12\lib\net461\Npgsql.dll</HintPath>
     </Reference>
@@ -115,6 +133,7 @@
     <Reference Include="System.Diagnostics.DiagnosticSource, Version=4.0.5.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Diagnostics.DiagnosticSource.4.7.1\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
     </Reference>
@@ -148,6 +167,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="API\Account.cs" />
     <Compile Include="fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +179,12 @@
     </Compile>
     <Compile Include="form\fCanXe.Designer.cs">
       <DependentUpon>fCanXe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\fChatLuongHH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\fChatLuongHH.Designer.cs">
+      <DependentUpon>fChatLuongHH.cs</DependentUpon>
     </Compile>
     <Compile Include="form\fCOM.cs">
       <SubType>Form</SubType>
@@ -172,47 +198,95 @@
     <Compile Include="form\fKhachHang.Designer.cs">
       <DependentUpon>fKhachHang.cs</DependentUpon>
     </Compile>
+    <Compile Include="form\fKhoHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\fKhoHang.Designer.cs">
+      <DependentUpon>fKhoHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="form\fKieuCan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\fKieuCan.Designer.cs">
+      <DependentUpon>fKieuCan.cs</DependentUpon>
+    </Compile>
     <Compile Include="form\fMain.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="form\fMain.Designer.cs">
       <DependentUpon>fMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20230405014121_nhomuser.cs" />
-    <Compile Include="Migrations\20230405014121_nhomuser.designer.cs">
-      <DependentUpon>20230405014121_nhomuser.cs</DependentUpon>
+    <Compile Include="form\fNguonGocHangHoa.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Migrations\20230405015112_suacolum.cs" />
-    <Compile Include="Migrations\20230405015112_suacolum.designer.cs">
-      <DependentUpon>20230405015112_suacolum.cs</DependentUpon>
+    <Compile Include="form\fNguonGocHangHoa.Designer.cs">
+      <DependentUpon>fNguonGocHangHoa.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20230405020128_themghichu.cs" />
-    <Compile Include="Migrations\20230405020128_themghichu.designer.cs">
-      <DependentUpon>20230405020128_themghichu.cs</DependentUpon>
+    <Compile Include="form\fTTcanxe.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Migrations\20230405022510_themKhachHang1.cs" />
-    <Compile Include="Migrations\20230405022510_themKhachHang1.designer.cs">
-      <DependentUpon>20230405022510_themKhachHang1.cs</DependentUpon>
+    <Compile Include="form\fTTcanxe.Designer.cs">
+      <DependentUpon>fTTcanxe.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20230405032355_capnhatbang.cs" />
-    <Compile Include="Migrations\20230405032355_capnhatbang.designer.cs">
-      <DependentUpon>20230405032355_capnhatbang.cs</DependentUpon>
+    <Compile Include="form\fUser.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Migrations\20230407071355_suastbKH1.cs" />
-    <Compile Include="Migrations\20230407071355_suastbKH1.designer.cs">
-      <DependentUpon>20230407071355_suastbKH1.cs</DependentUpon>
+    <Compile Include="form\fUser.Designer.cs">
+      <DependentUpon>fUser.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20230408013341_cmnd.cs" />
-    <Compile Include="Migrations\20230408013341_cmnd.designer.cs">
-      <DependentUpon>20230408013341_cmnd.cs</DependentUpon>
+    <Compile Include="form\fLoaiHang.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Migrations\20230408013602_cmnd1.cs" />
-    <Compile Include="Migrations\20230408013602_cmnd1.designer.cs">
-      <DependentUpon>20230408013602_cmnd1.cs</DependentUpon>
+    <Compile Include="form\fLoaiHang.Designer.cs">
+      <DependentUpon>fLoaiHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20230408015407_ngaycapkh.cs" />
-    <Compile Include="Migrations\20230408015407_ngaycapkh.designer.cs">
-      <DependentUpon>20230408015407_ngaycapkh.cs</DependentUpon>
+    <Compile Include="Migrations\20230411020530_themKL2.cs" />
+    <Compile Include="Migrations\20230411020530_themKL2.designer.cs">
+      <DependentUpon>20230411020530_themKL2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20230413043106_ttcanxems.cs" />
+    <Compile Include="Migrations\20230413043106_ttcanxems.designer.cs">
+      <DependentUpon>20230413043106_ttcanxems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20230413043932_ttcanxems1.cs" />
+    <Compile Include="Migrations\20230413043932_ttcanxems1.designer.cs">
+      <DependentUpon>20230413043932_ttcanxems1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20230413045940_ttcanxems2.cs" />
+    <Compile Include="Migrations\20230413045940_ttcanxems2.designer.cs">
+      <DependentUpon>20230413045940_ttcanxems2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20230413060905_ttcanxems3.cs" />
+    <Compile Include="Migrations\20230413060905_ttcanxems3.designer.cs">
+      <DependentUpon>20230413060905_ttcanxems3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20230413063321_ttcanxems4.cs" />
+    <Compile Include="Migrations\20230413063321_ttcanxems4.designer.cs">
+      <DependentUpon>20230413063321_ttcanxems4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20230413064345_ttcanxems6.cs" />
+    <Compile Include="Migrations\20230413064345_ttcanxems6.designer.cs">
+      <DependentUpon>20230413064345_ttcanxems6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20230413065644_ttcanxems7.cs" />
+    <Compile Include="Migrations\20230413065644_ttcanxems7.designer.cs">
+      <DependentUpon>20230413065644_ttcanxems7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20230413093745_kieucan.cs" />
+    <Compile Include="Migrations\20230413093745_kieucan.designer.cs">
+      <DependentUpon>20230413093745_kieucan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20230418023639_capnhat.cs" />
+    <Compile Include="Migrations\20230418023639_capnhat.designer.cs">
+      <DependentUpon>20230418023639_capnhat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20230420075923_themcolum.cs" />
+    <Compile Include="Migrations\20230420075923_themcolum.designer.cs">
+      <DependentUpon>20230420075923_themcolum.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20230420082450_themcolumdogiathanhtien.cs" />
+    <Compile Include="Migrations\20230420082450_themcolumdogiathanhtien.designer.cs">
+      <DependentUpon>20230420082450_themcolumdogiathanhtien.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\CanDbcontextModelSnapshot.cs" />
     <Compile Include="models\CanDbcontext.cs" />
@@ -233,14 +307,35 @@
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="form\fChatLuongHH.resx">
+      <DependentUpon>fChatLuongHH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="form\fCOM.resx">
       <DependentUpon>fCOM.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="form\fKhachHang.resx">
       <DependentUpon>fKhachHang.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="form\fKhoHang.resx">
+      <DependentUpon>fKhoHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\fKieuCan.resx">
+      <DependentUpon>fKieuCan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="form\fMain.resx">
       <DependentUpon>fMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\fNguonGocHangHoa.resx">
+      <DependentUpon>fNguonGocHangHoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\fTTcanxe.resx">
+      <DependentUpon>fTTcanxe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\fUser.resx">
+      <DependentUpon>fUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\fLoaiHang.resx">
+      <DependentUpon>fLoaiHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -268,6 +363,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\anhxe.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mui-ten.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\navigation.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -23,11 +23,8 @@ namespace tramcan2.form
         void Loaddata()
         {
             
-                var result = from c in db.khachHangs select c;  // c1: lấy ra cái mong muốn, theo thứ tự  //c2 db.Product.tostring(); lấy hết
-                                                                // var result = from c in db.Products //where c.Id < 10  select c;
+                var result = from c in db.khachHangs select c;  
                 dataGridView1.DataSource = result.ToList();
-
-                 
 
         }
         
@@ -126,6 +123,11 @@ namespace tramcan2.form
             textBox_diachikh.DataBindings.Add(new Binding("Text", dataGridView1.DataSource, "DiaChiKH"));
             textBox_cmnd.DataBindings.Clear();
             textBox_cmnd.DataBindings.Add(new Binding("Text", dataGridView1.DataSource, "CMNDKH"));
+        }
+
+        private void fKhachHang_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

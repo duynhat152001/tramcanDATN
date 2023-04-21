@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace tramcan2.models
 {
     [Table("KhoHang")]
-    internal class KhoHang
+    class KhoHang
     {
         [Key]
         public int Id { get; set; }
@@ -17,4 +17,5 @@ namespace tramcan2.models
         public string DiaChiKhoHang { get; set; }
         public string GhiChu { get; set; }
     }
+
 }

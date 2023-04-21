@@ -14,9 +14,9 @@ namespace tramcan2.models
         [Key]
         public int Id { get; set; }
         public string TenKieuCan { get; set; }
+        public int? SoLanCan { get; set; }
         public string GhiChu { get; set; }
-        public int SoLanCan { get; set; }
-        public string TenThongTinChua { get; set; }
-        public double DuLieuDieuChinh { get; set; }
+        public string TenThongTinDieuChinh { get; set; }
+        public double? DuLieuDieuChinh { get; set; }
     }
 }

@@ -10,8 +10,8 @@ using tramcan2.models;
 namespace tramcan2.Migrations
 {
     [DbContext(typeof(CanDbcontext))]
-    [Migration("20230407071355_suastbKH1")]
-    partial class suastbKH1
+    [Migration("20230418023639_capnhat")]
+    partial class capnhat
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -127,19 +127,19 @@ namespace tramcan2.Migrations
                         .HasColumnType("integer")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
-                    b.Property<double>("DuLieuDieuChinh")
+                    b.Property<double?>("DuLieuDieuChinh")
                         .HasColumnType("double precision");
 
                     b.Property<string>("GhiChu")
                         .HasColumnType("text");
 
-                    b.Property<int>("SoLanCan")
+                    b.Property<int?>("SoLanCan")
                         .HasColumnType("integer");
 
                     b.Property<string>("TenKieuCan")
                         .HasColumnType("text");
 
-                    b.Property<string>("TenThongTinChua")
+                    b.Property<string>("TenThongTinDieuChinh")
                         .HasColumnType("text");
 
                     b.HasKey("Id");
@@ -211,6 +211,57 @@ namespace tramcan2.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("NhomUser");
+                });
+
+            modelBuilder.Entity("tramcan2.models.TTCanXe", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer")
+                        .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
+
+                    b.Property<string>("BienSoDauXe")
+                        .HasColumnType("text");
+
+                    b.Property<string>("BienSoDuoiXe")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ChatLuongHH")
+                        .HasColumnType("text");
+
+                    b.Property<string>("Date")
+                        .HasColumnType("text");
+
+                    b.Property<string>("GhiChu")
+                        .HasColumnType("text");
+
+                    b.Property<string>("KhachHang")
+                        .HasColumnType("text");
+
+                    b.Property<string>("KhoHang")
+                        .HasColumnType("text");
+
+                    b.Property<double>("KhoiLuongL1")
+                        .HasColumnType("double precision");
+
+                    b.Property<double>("KhoiLuongL2")
+                        .HasColumnType("double precision");
+
+                    b.Property<string>("KieuCan")
+                        .HasColumnType("text");
+
+                    b.Property<string>("LoaiHang")
+                        .HasColumnType("text");
+
+                    b.Property<string>("NguonGoc")
+                        .HasColumnType("text");
+
+                    b.Property<string>("TenLaixe")
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TTCanXe");
                 });
 
             modelBuilder.Entity("tramcan2.models.TramCan", b =>

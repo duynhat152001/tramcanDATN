@@ -2,21 +2,22 @@
 
 namespace tramcan2.Migrations
 {
-    public partial class suacolum : Migration
+    public partial class themKL2 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AddColumn<string>(
-                name: "TenNhom",
-                table: "NhomUser",
-                nullable: true);
+            migrationBuilder.AddColumn<double>(
+                name: "KhoiLuongL2",
+                table: "TTCanXe",
+                nullable: false,
+                defaultValue: 0.0);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
-                name: "TenNhom",
-                table: "NhomUser");
+                name: "KhoiLuongL2",
+                table: "TTCanXe");
         }
     }
 }
