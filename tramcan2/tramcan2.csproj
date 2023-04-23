@@ -240,33 +240,11 @@
     <Compile Include="form\fLoaiHang.Designer.cs">
       <DependentUpon>fLoaiHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20230411020530_themKL2.cs" />
-    <Compile Include="Migrations\20230411020530_themKL2.designer.cs">
-      <DependentUpon>20230411020530_themKL2.cs</DependentUpon>
+    <Compile Include="form\fVehicle.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Migrations\20230413043106_ttcanxems.cs" />
-    <Compile Include="Migrations\20230413043106_ttcanxems.designer.cs">
-      <DependentUpon>20230413043106_ttcanxems.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20230413043932_ttcanxems1.cs" />
-    <Compile Include="Migrations\20230413043932_ttcanxems1.designer.cs">
-      <DependentUpon>20230413043932_ttcanxems1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20230413045940_ttcanxems2.cs" />
-    <Compile Include="Migrations\20230413045940_ttcanxems2.designer.cs">
-      <DependentUpon>20230413045940_ttcanxems2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20230413060905_ttcanxems3.cs" />
-    <Compile Include="Migrations\20230413060905_ttcanxems3.designer.cs">
-      <DependentUpon>20230413060905_ttcanxems3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20230413063321_ttcanxems4.cs" />
-    <Compile Include="Migrations\20230413063321_ttcanxems4.designer.cs">
-      <DependentUpon>20230413063321_ttcanxems4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20230413064345_ttcanxems6.cs" />
-    <Compile Include="Migrations\20230413064345_ttcanxems6.designer.cs">
-      <DependentUpon>20230413064345_ttcanxems6.cs</DependentUpon>
+    <Compile Include="form\fVehicle.Designer.cs">
+      <DependentUpon>fVehicle.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\20230413065644_ttcanxems7.cs" />
     <Compile Include="Migrations\20230413065644_ttcanxems7.designer.cs">
@@ -287,6 +265,26 @@
     <Compile Include="Migrations\20230420082450_themcolumdogiathanhtien.cs" />
     <Compile Include="Migrations\20230420082450_themcolumdogiathanhtien.designer.cs">
       <DependentUpon>20230420082450_themcolumdogiathanhtien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20230421085932_modifiTypedata.cs" />
+    <Compile Include="Migrations\20230421085932_modifiTypedata.designer.cs">
+      <DependentUpon>20230421085932_modifiTypedata.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20230421100020_modifikhohang.cs" />
+    <Compile Include="Migrations\20230421100020_modifikhohang.designer.cs">
+      <DependentUpon>20230421100020_modifikhohang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20230422042708_reqiured.cs" />
+    <Compile Include="Migrations\20230422042708_reqiured.designer.cs">
+      <DependentUpon>20230422042708_reqiured.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20230422052552_vehicle.cs" />
+    <Compile Include="Migrations\20230422052552_vehicle.designer.cs">
+      <DependentUpon>20230422052552_vehicle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\20230422053825_vehicle1.cs" />
+    <Compile Include="Migrations\20230422053825_vehicle1.designer.cs">
+      <DependentUpon>20230422053825_vehicle1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\CanDbcontextModelSnapshot.cs" />
     <Compile Include="models\CanDbcontext.cs" />
@@ -336,6 +334,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="form\fLoaiHang.resx">
       <DependentUpon>fLoaiHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form\fVehicle.resx">
+      <DependentUpon>fVehicle.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

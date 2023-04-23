@@ -38,31 +38,39 @@ namespace tramcan2.form
         }
         private void btn_them_Click(object sender, EventArgs e)
         {
-            string Name_t = textBox_tenLH.Text;
+            try
+            {
+                string Name_t = textBox_tenLH.Text;
 
-            string Ma = textBox_maLH.Text;
+                string Ma = textBox_maLH.Text;
+
+                string DonGia_t = textBox_donGia.Text;
+                double DonGia = double.Parse(DonGia_t);
+                string TyLeQuyDoi_t = textBox_tyLeQuyDoi.Text;
+                int TyLeQuyDoi = int.Parse(TyLeQuyDoi_t);
+
+
+
+
+                LoaiHang LH = new LoaiHang() { TenLoaiHang = Name_t, Ma = Ma, DonGia = DonGia, TyLeQuyDoi = TyLeQuyDoi };
+
+                if (LH != null)
+                {
+                    db.loaiHangs.Add(LH);
+                    db.SaveChanges();
+                    Loaddata();
+
+                }
+                else
+                {
+                    MessageBox.Show("Lỗi: " + "không thêm vào được", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Lỗi: " + "không thêm vào được" +ex.ToString(), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             
-            string DonGia_t = textBox_donGia.Text;
-            double DonGia = double.Parse(DonGia_t);
-            string TyLeQuyDoi_t = textBox_tyLeQuyDoi.Text;
-            int TyLeQuyDoi = int.Parse(TyLeQuyDoi_t);
-
-
-
-
-            LoaiHang LH = new LoaiHang() { TenLoaiHang = Name_t,Ma = Ma, DonGia = DonGia, TyLeQuyDoi = TyLeQuyDoi };
-
-            if (LH != null)
-            {
-                db.loaiHangs.Add(LH);
-                db.SaveChanges();
-                Loaddata();
-
-            }
-            else
-            {
-                MessageBox.Show("Lỗi: " + "không thêm vào được", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
         }
 
         private void dataGridView1_Click(object sender, EventArgs e)
@@ -80,42 +88,58 @@ namespace tramcan2.form
 
         private void btn_xoa_Click(object sender, EventArgs e)
         {
-            string MaLH_t = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
-            int MaLH = int.Parse(MaLH_t);
+            try
+            {
+                string MaLH_t = dataGridView1.SelectedRows[0].Cells[0].Value.ToString();
+                int MaLH = int.Parse(MaLH_t);
 
-            LoaiHang LH = db.loaiHangs.Find(MaLH);
-            if (LH != null)
-            {
-                db.loaiHangs.Remove(LH);
-                db.SaveChanges();
-                Loaddata();
+                LoaiHang LH = db.loaiHangs.Find(MaLH);
+                if (LH != null)
+                {
+                    db.loaiHangs.Remove(LH);
+                    db.SaveChanges();
+                    Loaddata();
+                }
+                else
+                {
+                    MessageBox.Show("Lỗi: " + "không xóa được", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
+            catch(Exception ex)
             {
-                MessageBox.Show("Lỗi: " + "không xóa được", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Lỗi: " + "không xóa được\n"+ex.ToString(), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            
         }
 
         private void btn_sua_Click(object sender, EventArgs e)
         {
-            string MaLH_t = dataGridView1.SelectedRows[0].Cells[0].OwningRow.Cells["Id"].Value.ToString();
-            int MaLH = int.Parse(MaLH_t);
-
-            LoaiHang LH = db.loaiHangs.Find(MaLH) ;
-            LH.Ma = textBox_maLH.Text;
-            LH.TenLoaiHang = textBox_tenLH.Text;
-            LH.DonGia = double.Parse(textBox_donGia.Text);
-            LH.TyLeQuyDoi = double.Parse(textBox_tyLeQuyDoi.Text);
-
-            if (LH != null)
+            try
             {
-                db.SaveChanges();
-                Loaddata();
+                string MaLH_t = dataGridView1.SelectedRows[0].Cells[0].OwningRow.Cells["Id"].Value.ToString();
+                int MaLH = int.Parse(MaLH_t);
+
+                LoaiHang LH = db.loaiHangs.Find(MaLH);
+                LH.Ma = textBox_maLH.Text;
+                LH.TenLoaiHang = textBox_tenLH.Text;
+                LH.DonGia = double.Parse(textBox_donGia.Text);
+                LH.TyLeQuyDoi = double.Parse(textBox_tyLeQuyDoi.Text);
+
+                if (LH != null)
+                {
+                    db.SaveChanges();
+                    Loaddata();
+                }
+                else
+                {
+                    MessageBox.Show("Lỗi: " + "không xóa được", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
+            catch(Exception ex)
             {
-                MessageBox.Show("Lỗi: " + "không xóa được", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Lỗi: " + "không xóa được"+ex.ToString(), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            
         }
     }
 }

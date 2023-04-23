@@ -13,6 +13,7 @@ namespace tramcan2.models
     {
         [Key]
         public int Id { get; set; }
+        public string MaKhoHang { get; set; }
         public string TenKhoHang { get; set; }
         public string DiaChiKhoHang { get; set; }
         public string GhiChu { get; set; }

@@ -2,22 +2,21 @@
 
 namespace tramcan2.Migrations
 {
-    public partial class themKL2 : Migration
+    public partial class modifikhohang : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AddColumn<double>(
-                name: "KhoiLuongL2",
-                table: "TTCanXe",
-                nullable: false,
-                defaultValue: 0.0);
+            migrationBuilder.AddColumn<string>(
+                name: "MaKhoHang",
+                table: "KhoHang",
+                nullable: true);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropColumn(
-                name: "KhoiLuongL2",
-                table: "TTCanXe");
+                name: "MaKhoHang",
+                table: "KhoHang");
         }
     }
 }

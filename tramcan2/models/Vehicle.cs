@@ -13,13 +13,17 @@ namespace tramcan2.models
     {
         [Key]
         public int Id { get; set; }
+        [Required]
         public string BienSoDauXe { get; set; }
+        [Required]
         public string BienSoCuoiXe { get; set; }
-        public double TrongTai { get; set; }
-        public int DTXe { get; set; }
-        public int CMNDXe { get; set; }
+        [Required]
+        public float TrongTai { get; set; }
+        public string TenChuXe { get; set; }
+        public int SoDienThoai { get; set; }
+        public int CMND { get; set; }
         public int MaTheXe { get; set; }
         public string GhiChuXe { get; set; }
-        public string XeChiCan1Lan { get; set; }
+        
     }
 }

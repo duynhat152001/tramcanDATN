@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBox_biensotruoc = new System.Windows.Forms.ComboBox();
+            this.textBox_CMND = new System.Windows.Forms.TextBox();
             this.comboBox_chatluong = new System.Windows.Forms.ComboBox();
             this.comboBox_nguongoc = new System.Windows.Forms.ComboBox();
             this.comboBox_khohang = new System.Windows.Forms.ComboBox();
@@ -59,6 +61,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.textBox_donGia = new System.Windows.Forms.TextBox();
             this.textBox_Thanhtien = new System.Windows.Forms.TextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -95,6 +98,9 @@
             this.btn_can2 = new System.Windows.Forms.Button();
             this.btn_inphieu = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.panel16 = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.textBox_tkTatCa = new System.Windows.Forms.TextBox();
             this.panel15 = new System.Windows.Forms.Panel();
             this.label27 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
@@ -109,10 +115,6 @@
             this.textBox_tg = new System.Windows.Forms.TextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.textBox_donGia = new System.Windows.Forms.TextBox();
-            this.panel16 = new System.Windows.Forms.Panel();
-            this.label16 = new System.Windows.Forms.Label();
-            this.textBox_tkTatCa = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -129,25 +131,26 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel10.SuspendLayout();
             this.panel11.SuspendLayout();
+            this.panel16.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel13.SuspendLayout();
             this.panel12.SuspendLayout();
-            this.panel16.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlDark;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.Location = new System.Drawing.Point(2, 419);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -158,6 +161,8 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.comboBox_biensotruoc);
+            this.panel1.Controls.Add(this.textBox_CMND);
             this.panel1.Controls.Add(this.comboBox_chatluong);
             this.panel1.Controls.Add(this.comboBox_nguongoc);
             this.panel1.Controls.Add(this.comboBox_khohang);
@@ -187,17 +192,42 @@
             this.panel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.panel1.Location = new System.Drawing.Point(2, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(409, 380);
+            this.panel1.Size = new System.Drawing.Size(486, 380);
             this.panel1.TabIndex = 1;
+            // 
+            // comboBox_biensotruoc
+            // 
+            this.comboBox_biensotruoc.BackColor = System.Drawing.SystemColors.Menu;
+            this.comboBox_biensotruoc.DropDownHeight = 100;
+            this.comboBox_biensotruoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox_biensotruoc.FormattingEnabled = true;
+            this.comboBox_biensotruoc.IntegralHeight = false;
+            this.comboBox_biensotruoc.ItemHeight = 18;
+            this.comboBox_biensotruoc.Location = new System.Drawing.Point(316, 69);
+            this.comboBox_biensotruoc.Name = "comboBox_biensotruoc";
+            this.comboBox_biensotruoc.Size = new System.Drawing.Size(162, 26);
+            this.comboBox_biensotruoc.TabIndex = 34;
+            this.comboBox_biensotruoc.SelectedIndexChanged += new System.EventHandler(this.comboBox_biensotruoc_SelectedIndexChanged);
+            this.comboBox_biensotruoc.Click += new System.EventHandler(this.comboBox_biensotruoc_Click);
+            // 
+            // textBox_CMND
+            // 
+            this.textBox_CMND.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.textBox_CMND.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_CMND.Location = new System.Drawing.Point(316, 138);
+            this.textBox_CMND.Multiline = true;
+            this.textBox_CMND.Name = "textBox_CMND";
+            this.textBox_CMND.Size = new System.Drawing.Size(163, 30);
+            this.textBox_CMND.TabIndex = 33;
             // 
             // comboBox_chatluong
             // 
             this.comboBox_chatluong.BackColor = System.Drawing.SystemColors.Menu;
             this.comboBox_chatluong.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_chatluong.FormattingEnabled = true;
-            this.comboBox_chatluong.Location = new System.Drawing.Point(280, 293);
+            this.comboBox_chatluong.Location = new System.Drawing.Point(316, 318);
             this.comboBox_chatluong.Name = "comboBox_chatluong";
-            this.comboBox_chatluong.Size = new System.Drawing.Size(125, 26);
+            this.comboBox_chatluong.Size = new System.Drawing.Size(163, 26);
             this.comboBox_chatluong.TabIndex = 30;
             this.comboBox_chatluong.SelectedValueChanged += new System.EventHandler(this.comboBox_chatluong_SelectedValueChanged);
             this.comboBox_chatluong.Click += new System.EventHandler(this.comboBox_chatluong_Click);
@@ -207,9 +237,9 @@
             this.comboBox_nguongoc.BackColor = System.Drawing.SystemColors.Menu;
             this.comboBox_nguongoc.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_nguongoc.FormattingEnabled = true;
-            this.comboBox_nguongoc.Location = new System.Drawing.Point(280, 258);
+            this.comboBox_nguongoc.Location = new System.Drawing.Point(316, 281);
             this.comboBox_nguongoc.Name = "comboBox_nguongoc";
-            this.comboBox_nguongoc.Size = new System.Drawing.Size(125, 26);
+            this.comboBox_nguongoc.Size = new System.Drawing.Size(163, 26);
             this.comboBox_nguongoc.TabIndex = 29;
             this.comboBox_nguongoc.SelectedValueChanged += new System.EventHandler(this.comboBox_nguongoc_SelectedValueChanged);
             this.comboBox_nguongoc.Click += new System.EventHandler(this.comboBox_nguongoc_Click);
@@ -219,9 +249,9 @@
             this.comboBox_khohang.BackColor = System.Drawing.SystemColors.Menu;
             this.comboBox_khohang.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_khohang.FormattingEnabled = true;
-            this.comboBox_khohang.Location = new System.Drawing.Point(280, 219);
+            this.comboBox_khohang.Location = new System.Drawing.Point(315, 245);
             this.comboBox_khohang.Name = "comboBox_khohang";
-            this.comboBox_khohang.Size = new System.Drawing.Size(125, 26);
+            this.comboBox_khohang.Size = new System.Drawing.Size(163, 26);
             this.comboBox_khohang.TabIndex = 28;
             this.comboBox_khohang.SelectedValueChanged += new System.EventHandler(this.comboBox_khohang_SelectedValueChanged);
             this.comboBox_khohang.Click += new System.EventHandler(this.comboBox_khohang_Click);
@@ -232,11 +262,10 @@
             this.comboBox_loaihang.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_loaihang.FormattingEnabled = true;
             this.comboBox_loaihang.IntegralHeight = false;
-            this.comboBox_loaihang.Location = new System.Drawing.Point(280, 183);
+            this.comboBox_loaihang.Location = new System.Drawing.Point(315, 210);
             this.comboBox_loaihang.Name = "comboBox_loaihang";
-            this.comboBox_loaihang.Size = new System.Drawing.Size(125, 26);
+            this.comboBox_loaihang.Size = new System.Drawing.Size(163, 26);
             this.comboBox_loaihang.TabIndex = 27;
-            
             this.comboBox_loaihang.SelectedValueChanged += new System.EventHandler(this.comboBox_loaihang_SelectedValueChanged);
             this.comboBox_loaihang.Click += new System.EventHandler(this.comboBox_loaihang_Click);
             // 
@@ -245,18 +274,17 @@
             this.comboBox_kieucan.BackColor = System.Drawing.SystemColors.Menu;
             this.comboBox_kieucan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox_kieucan.FormattingEnabled = true;
-            this.comboBox_kieucan.Location = new System.Drawing.Point(99, 353);
+            this.comboBox_kieucan.Location = new System.Drawing.Point(119, 349);
             this.comboBox_kieucan.Name = "comboBox_kieucan";
-            this.comboBox_kieucan.Size = new System.Drawing.Size(97, 26);
+            this.comboBox_kieucan.Size = new System.Drawing.Size(113, 26);
             this.comboBox_kieucan.TabIndex = 18;
-            
             this.comboBox_kieucan.Click += new System.EventHandler(this.comboBox_kieucan_Click);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(3, 352);
+            this.label8.Location = new System.Drawing.Point(12, 349);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(86, 19);
             this.label8.TabIndex = 19;
@@ -270,9 +298,9 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.IntegralHeight = false;
             this.comboBox2.ItemHeight = 18;
-            this.comboBox2.Location = new System.Drawing.Point(280, 145);
+            this.comboBox2.Location = new System.Drawing.Point(315, 174);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(124, 26);
+            this.comboBox2.Size = new System.Drawing.Size(162, 26);
             this.comboBox2.TabIndex = 26;
             this.comboBox2.SelectedValueChanged += new System.EventHandler(this.comboBox2_SelectedValueChanged);
             this.comboBox2.Click += new System.EventHandler(this.comboBox2_Click);
@@ -281,37 +309,37 @@
             // 
             this.textBox_chatluong.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.textBox_chatluong.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_chatluong.Location = new System.Drawing.Point(99, 287);
+            this.textBox_chatluong.Location = new System.Drawing.Point(119, 314);
             this.textBox_chatluong.Multiline = true;
             this.textBox_chatluong.Name = "textBox_chatluong";
-            this.textBox_chatluong.Size = new System.Drawing.Size(175, 30);
+            this.textBox_chatluong.Size = new System.Drawing.Size(191, 30);
             this.textBox_chatluong.TabIndex = 25;
             // 
             // textBox_tenlaixe
             // 
             this.textBox_tenlaixe.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.textBox_tenlaixe.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_tenlaixe.Location = new System.Drawing.Point(99, 320);
+            this.textBox_tenlaixe.Location = new System.Drawing.Point(119, 137);
             this.textBox_tenlaixe.Multiline = true;
             this.textBox_tenlaixe.Name = "textBox_tenlaixe";
-            this.textBox_tenlaixe.Size = new System.Drawing.Size(175, 30);
+            this.textBox_tenlaixe.Size = new System.Drawing.Size(191, 30);
             this.textBox_tenlaixe.TabIndex = 21;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(3, 327);
+            this.label9.Location = new System.Drawing.Point(12, 144);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(93, 19);
+            this.label9.Size = new System.Drawing.Size(97, 19);
             this.label9.TabIndex = 20;
-            this.label9.Text = "Tên lái xe(*)";
+            this.label9.Text = "Tên lái xe (*)";
             // 
             // label23
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(3, 293);
+            this.label23.Location = new System.Drawing.Point(12, 325);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(84, 19);
             this.label23.TabIndex = 24;
@@ -321,17 +349,17 @@
             // 
             this.textBox_nguongoc.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.textBox_nguongoc.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_nguongoc.Location = new System.Drawing.Point(99, 254);
+            this.textBox_nguongoc.Location = new System.Drawing.Point(119, 281);
             this.textBox_nguongoc.Multiline = true;
             this.textBox_nguongoc.Name = "textBox_nguongoc";
-            this.textBox_nguongoc.Size = new System.Drawing.Size(175, 30);
+            this.textBox_nguongoc.Size = new System.Drawing.Size(191, 30);
             this.textBox_nguongoc.TabIndex = 23;
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(3, 257);
+            this.label10.Location = new System.Drawing.Point(12, 288);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(80, 19);
             this.label10.TabIndex = 22;
@@ -341,57 +369,57 @@
             // 
             this.textBox_khohang.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.textBox_khohang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_khohang.Location = new System.Drawing.Point(99, 218);
+            this.textBox_khohang.Location = new System.Drawing.Point(119, 245);
             this.textBox_khohang.Multiline = true;
             this.textBox_khohang.Name = "textBox_khohang";
-            this.textBox_khohang.Size = new System.Drawing.Size(175, 30);
+            this.textBox_khohang.Size = new System.Drawing.Size(191, 30);
             this.textBox_khohang.TabIndex = 17;
             // 
             // textBox_loaihang
             // 
             this.textBox_loaihang.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.textBox_loaihang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_loaihang.Location = new System.Drawing.Point(99, 182);
+            this.textBox_loaihang.Location = new System.Drawing.Point(119, 209);
             this.textBox_loaihang.Multiline = true;
             this.textBox_loaihang.Name = "textBox_loaihang";
-            this.textBox_loaihang.Size = new System.Drawing.Size(175, 30);
+            this.textBox_loaihang.Size = new System.Drawing.Size(191, 30);
             this.textBox_loaihang.TabIndex = 16;
             // 
             // textBox_khachhang
             // 
             this.textBox_khachhang.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.textBox_khachhang.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_khachhang.Location = new System.Drawing.Point(99, 144);
+            this.textBox_khachhang.Location = new System.Drawing.Point(119, 173);
             this.textBox_khachhang.Multiline = true;
             this.textBox_khachhang.Name = "textBox_khachhang";
-            this.textBox_khachhang.Size = new System.Drawing.Size(175, 30);
+            this.textBox_khachhang.Size = new System.Drawing.Size(191, 30);
             this.textBox_khachhang.TabIndex = 15;
             // 
             // textBox_bienso2
             // 
             this.textBox_bienso2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.textBox_bienso2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_bienso2.Location = new System.Drawing.Point(99, 108);
+            this.textBox_bienso2.Location = new System.Drawing.Point(119, 105);
             this.textBox_bienso2.Multiline = true;
             this.textBox_bienso2.Name = "textBox_bienso2";
-            this.textBox_bienso2.Size = new System.Drawing.Size(175, 30);
+            this.textBox_bienso2.Size = new System.Drawing.Size(191, 30);
             this.textBox_bienso2.TabIndex = 14;
             // 
             // textBox_bienso1
             // 
             this.textBox_bienso1.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.textBox_bienso1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_bienso1.Location = new System.Drawing.Point(99, 72);
+            this.textBox_bienso1.Location = new System.Drawing.Point(119, 69);
             this.textBox_bienso1.Multiline = true;
             this.textBox_bienso1.Name = "textBox_bienso1";
-            this.textBox_bienso1.Size = new System.Drawing.Size(175, 30);
+            this.textBox_bienso1.Size = new System.Drawing.Size(191, 30);
             this.textBox_bienso1.TabIndex = 13;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(3, 218);
+            this.label7.Location = new System.Drawing.Point(12, 252);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(73, 19);
             this.label7.TabIndex = 12;
@@ -401,7 +429,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(3, 182);
+            this.label6.Location = new System.Drawing.Point(12, 213);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(75, 19);
             this.label6.TabIndex = 11;
@@ -411,37 +439,37 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(-5, 145);
+            this.label5.Location = new System.Drawing.Point(11, 177);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(106, 19);
+            this.label5.Size = new System.Drawing.Size(110, 19);
             this.label5.TabIndex = 10;
-            this.label5.Text = "Khách hàng(*)";
+            this.label5.Text = "Khách hàng (*)";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(3, 108);
+            this.label4.Location = new System.Drawing.Point(9, 105);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(89, 19);
+            this.label4.Size = new System.Drawing.Size(108, 19);
             this.label4.TabIndex = 9;
-            this.label4.Text = "Biển số 2(*)";
+            this.label4.Text = "Biển số sau (*)";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(3, 72);
+            this.label3.Location = new System.Drawing.Point(-3, 75);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 19);
+            this.label3.Size = new System.Drawing.Size(122, 19);
             this.label3.TabIndex = 8;
-            this.label3.Text = "Biển số 1(*)";
+            this.label3.Text = "Biển số trước (*)";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 36);
+            this.label2.Location = new System.Drawing.Point(47, 36);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 19);
             this.label2.TabIndex = 7;
@@ -451,10 +479,10 @@
             // 
             this.textBox_sophieu.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.textBox_sophieu.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_sophieu.Location = new System.Drawing.Point(99, 36);
+            this.textBox_sophieu.Location = new System.Drawing.Point(119, 33);
             this.textBox_sophieu.Multiline = true;
             this.textBox_sophieu.Name = "textBox_sophieu";
-            this.textBox_sophieu.Size = new System.Drawing.Size(175, 30);
+            this.textBox_sophieu.Size = new System.Drawing.Size(191, 30);
             this.textBox_sophieu.TabIndex = 1;
             // 
             // label1
@@ -464,11 +492,11 @@
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(-19, -1);
+            this.label1.Location = new System.Drawing.Point(-3, -2);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(427, 24);
+            this.label1.Size = new System.Drawing.Size(497, 24);
             this.label1.TabIndex = 0;
-            this.label1.Text = "                    THÔNG TIN PHIẾU CÂN                   ";
+            this.label1.Text = "                    THÔNG TIN PHIẾU CÂN                                 ";
             // 
             // panel2
             // 
@@ -478,9 +506,9 @@
             this.panel2.Controls.Add(this.textBox_ghisocan);
             this.panel2.Controls.Add(this.textBox9);
             this.panel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.panel2.Location = new System.Drawing.Point(417, 3);
+            this.panel2.Location = new System.Drawing.Point(487, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(432, 273);
+            this.panel2.Size = new System.Drawing.Size(432, 265);
             this.panel2.TabIndex = 2;
             // 
             // panel9
@@ -493,7 +521,19 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(421, 64);
             this.panel9.TabIndex = 31;
-          
+            // 
+            // textBox_donGia
+            // 
+            this.textBox_donGia.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.textBox_donGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_donGia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.textBox_donGia.Location = new System.Drawing.Point(94, 5);
+            this.textBox_donGia.Multiline = true;
+            this.textBox_donGia.Name = "textBox_donGia";
+            this.textBox_donGia.Size = new System.Drawing.Size(319, 30);
+            this.textBox_donGia.TabIndex = 30;
+            this.textBox_donGia.Text = "0";
+            this.textBox_donGia.TextChanged += new System.EventHandler(this.textBox_donGia_TextChanged_1);
             // 
             // textBox_Thanhtien
             // 
@@ -524,7 +564,6 @@
             this.label21.Size = new System.Drawing.Size(70, 18);
             this.label21.TabIndex = 30;
             this.label21.Text = "Đơn Giá";
-           
             // 
             // panel3
             // 
@@ -757,44 +796,44 @@
             this.panel8.Controls.Add(this.pictureBox4);
             this.panel8.Controls.Add(this.pictureBox2);
             this.panel8.Controls.Add(this.pictureBox1);
-            this.panel8.Location = new System.Drawing.Point(849, 92);
+            this.panel8.Location = new System.Drawing.Point(920, 92);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(518, 289);
+            this.panel8.Size = new System.Drawing.Size(445, 289);
             this.panel8.TabIndex = 4;
             // 
             // pictureBox3
             // 
             this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox3.Location = new System.Drawing.Point(267, 148);
+            this.pictureBox3.Location = new System.Drawing.Point(221, 146);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(248, 136);
+            this.pictureBox3.Size = new System.Drawing.Size(223, 136);
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
             // 
             // pictureBox4
             // 
             this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox4.Location = new System.Drawing.Point(4, 148);
+            this.pictureBox4.Location = new System.Drawing.Point(4, 146);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(257, 136);
+            this.pictureBox4.Size = new System.Drawing.Size(211, 136);
             this.pictureBox4.TabIndex = 2;
             this.pictureBox4.TabStop = false;
             // 
             // pictureBox2
             // 
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox2.Location = new System.Drawing.Point(267, 2);
+            this.pictureBox2.Location = new System.Drawing.Point(221, 5);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(248, 139);
+            this.pictureBox2.Size = new System.Drawing.Size(223, 139);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox1.Location = new System.Drawing.Point(3, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(258, 139);
+            this.pictureBox1.Size = new System.Drawing.Size(212, 139);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -806,9 +845,9 @@
             this.panel10.Controls.Add(this.btn_can1);
             this.panel10.Controls.Add(this.btn_can2);
             this.panel10.Controls.Add(this.btn_inphieu);
-            this.panel10.Location = new System.Drawing.Point(417, 278);
+            this.panel10.Location = new System.Drawing.Point(491, 273);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(432, 103);
+            this.panel10.Size = new System.Drawing.Size(432, 94);
             this.panel10.TabIndex = 5;
             // 
             // btn_themmoi
@@ -915,6 +954,39 @@
             this.panel11.Size = new System.Drawing.Size(1368, 42);
             this.panel11.TabIndex = 6;
             // 
+            // panel16
+            // 
+            this.panel16.BackColor = System.Drawing.SystemColors.InactiveBorder;
+            this.panel16.Controls.Add(this.label16);
+            this.panel16.Controls.Add(this.textBox_tkTatCa);
+            this.panel16.Location = new System.Drawing.Point(118, 1);
+            this.panel16.Name = "panel16";
+            this.panel16.Size = new System.Drawing.Size(227, 33);
+            this.panel16.TabIndex = 6;
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.label16.Location = new System.Drawing.Point(3, 8);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(59, 20);
+            this.label16.TabIndex = 4;
+            this.label16.Text = "Tất cả";
+            // 
+            // textBox_tkTatCa
+            // 
+            this.textBox_tkTatCa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox_tkTatCa.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.textBox_tkTatCa.Location = new System.Drawing.Point(61, 5);
+            this.textBox_tkTatCa.Multiline = true;
+            this.textBox_tkTatCa.Name = "textBox_tkTatCa";
+            this.textBox_tkTatCa.Size = new System.Drawing.Size(163, 26);
+            this.textBox_tkTatCa.TabIndex = 2;
+            this.textBox_tkTatCa.Tag = "";
+            this.textBox_tkTatCa.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // panel15
             // 
             this.panel15.BackColor = System.Drawing.SystemColors.InactiveBorder;
@@ -922,7 +994,7 @@
             this.panel15.Controls.Add(this.comboBox3);
             this.panel15.Location = new System.Drawing.Point(881, 3);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(221, 36);
+            this.panel15.Size = new System.Drawing.Size(221, 32);
             this.panel15.TabIndex = 7;
             // 
             // label27
@@ -947,7 +1019,6 @@
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(121, 21);
             this.comboBox3.TabIndex = 7;
-           
             // 
             // panel14
             // 
@@ -956,7 +1027,7 @@
             this.panel14.Controls.Add(this.comboBox_tkTenKH);
             this.panel14.Location = new System.Drawing.Point(348, 2);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(294, 36);
+            this.panel14.Size = new System.Drawing.Size(294, 31);
             this.panel14.TabIndex = 6;
             // 
             // label26
@@ -1002,7 +1073,7 @@
             this.panel13.Controls.Add(this.textBox_tkBienso);
             this.panel13.Location = new System.Drawing.Point(645, 2);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(227, 36);
+            this.panel13.Size = new System.Drawing.Size(227, 33);
             this.panel13.TabIndex = 5;
             // 
             // label25
@@ -1036,7 +1107,7 @@
             this.panel12.Controls.Add(this.dateTimePicker1);
             this.panel12.Location = new System.Drawing.Point(1105, 3);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(231, 35);
+            this.panel12.Size = new System.Drawing.Size(231, 32);
             this.panel12.TabIndex = 4;
             // 
             // textBox_tg
@@ -1071,53 +1142,6 @@
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(18, 24);
             this.dateTimePicker1.TabIndex = 3;
-            
-            // 
-            // textBox_donGia
-            // 
-            this.textBox_donGia.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox_donGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_donGia.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.textBox_donGia.Location = new System.Drawing.Point(94, 5);
-            this.textBox_donGia.Multiline = true;
-            this.textBox_donGia.Name = "textBox_donGia";
-            this.textBox_donGia.Size = new System.Drawing.Size(319, 30);
-            this.textBox_donGia.TabIndex = 30;
-            this.textBox_donGia.Text = "0";
-            this.textBox_donGia.TextChanged += new System.EventHandler(this.textBox_donGia_TextChanged_1);
-            // 
-            // panel16
-            // 
-            this.panel16.BackColor = System.Drawing.SystemColors.InactiveBorder;
-            this.panel16.Controls.Add(this.label16);
-            this.panel16.Controls.Add(this.textBox_tkTatCa);
-            this.panel16.Location = new System.Drawing.Point(118, 2);
-            this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(227, 36);
-            this.panel16.TabIndex = 6;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label16.Location = new System.Drawing.Point(3, 8);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(59, 20);
-            this.label16.TabIndex = 4;
-            this.label16.Text = "Tất cả";
-            // 
-            // textBox_tkTatCa
-            // 
-            this.textBox_tkTatCa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox_tkTatCa.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.textBox_tkTatCa.Location = new System.Drawing.Point(61, 5);
-            this.textBox_tkTatCa.Multiline = true;
-            this.textBox_tkTatCa.Name = "textBox_tkTatCa";
-            this.textBox_tkTatCa.Size = new System.Drawing.Size(163, 26);
-            this.textBox_tkTatCa.TabIndex = 2;
-            this.textBox_tkTatCa.Tag = "";
-            this.textBox_tkTatCa.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // fTTcanxe
             // 
@@ -1159,6 +1183,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel10.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
+            this.panel16.ResumeLayout(false);
+            this.panel16.PerformLayout();
             this.panel15.ResumeLayout(false);
             this.panel15.PerformLayout();
             this.panel14.ResumeLayout(false);
@@ -1167,8 +1193,6 @@
             this.panel13.PerformLayout();
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
-            this.panel16.ResumeLayout(false);
-            this.panel16.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1259,5 +1283,7 @@
         private System.Windows.Forms.Panel panel16;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.TextBox textBox_tkTatCa;
+        private System.Windows.Forms.TextBox textBox_CMND;
+        private System.Windows.Forms.ComboBox comboBox_biensotruoc;
     }
 }

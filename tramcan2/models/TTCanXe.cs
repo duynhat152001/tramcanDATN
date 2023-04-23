@@ -26,9 +26,9 @@ namespace tramcan2.models
         
         public string BienSoDuoiXe { get; set; }
 
-        public double KhoiLuongL1 { get; set; }
-        public double KhoiLuongL2 { get; set; }
-        public double KhoiLuongHang { get; set; }
+        public float KhoiLuongL1 { get; set; }
+        public float KhoiLuongL2 { get; set; }
+        public float KhoiLuongHang { get; set; }
         public string ThoiGianCanL1 { get; set; }
         public string ThoiGianCanL2 { get; set; }
         public float DonGia { get; set; }

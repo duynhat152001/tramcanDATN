@@ -31,14 +31,14 @@ namespace tramcan2.form
         private void btn_them_Click(object sender, EventArgs e)
         {
             
-            
+            string MaKhoHang = textBox_makh.Text;
             string Name_t = textBox_tenkh.Text;      
             string DiaChiKH_t = textBox_diachikh.Text;
             string Ghichu = textBox_Ghichu.Text;
 
 
 
-            KhoHang KH = new KhoHang() { TenKhoHang = Name_t, DiaChiKhoHang = DiaChiKH_t, GhiChu = Ghichu  };
+            KhoHang KH = new KhoHang() {MaKhoHang=MaKhoHang ,TenKhoHang = Name_t, DiaChiKhoHang = DiaChiKH_t, GhiChu = Ghichu  };
 
             if (KH != null)
             {
@@ -57,7 +57,7 @@ namespace tramcan2.form
         {
 
             textBox_makh.DataBindings.Clear();
-            textBox_makh.DataBindings.Add(new Binding("Text", dataGridView1.DataSource, "Id"));
+            textBox_makh.DataBindings.Add(new Binding("Text", dataGridView1.DataSource, "MaKhoHang"));
            
             textBox_tenkh.DataBindings.Clear();
             textBox_tenkh.DataBindings.Add(new Binding("Text", dataGridView1.DataSource, "TenKhoHang"));
@@ -106,6 +106,11 @@ namespace tramcan2.form
             {
                 MessageBox.Show("Lỗi: " + "không xóa được", "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Loaddata();
         }
     }
 }

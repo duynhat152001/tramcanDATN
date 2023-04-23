@@ -10,8 +10,8 @@ using tramcan2.models;
 namespace tramcan2.Migrations
 {
     [DbContext(typeof(CanDbcontext))]
-    [Migration("20230413043932_ttcanxems1")]
-    partial class ttcanxems1
+    [Migration("20230421100020_modifikhohang")]
+    partial class modifikhohang
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -112,6 +112,9 @@ namespace tramcan2.Migrations
                     b.Property<string>("GhiChu")
                         .HasColumnType("text");
 
+                    b.Property<string>("MaKhoHang")
+                        .HasColumnType("text");
+
                     b.Property<string>("TenKhoHang")
                         .HasColumnType("text");
 
@@ -127,19 +130,19 @@ namespace tramcan2.Migrations
                         .HasColumnType("integer")
                         .HasAnnotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn);
 
-                    b.Property<double>("DuLieuDieuChinh")
+                    b.Property<double?>("DuLieuDieuChinh")
                         .HasColumnType("double precision");
 
                     b.Property<string>("GhiChu")
                         .HasColumnType("text");
 
-                    b.Property<int>("SoLanCan")
+                    b.Property<int?>("SoLanCan")
                         .HasColumnType("integer");
 
                     b.Property<string>("TenKieuCan")
                         .HasColumnType("text");
 
-                    b.Property<string>("TenThongTinChua")
+                    b.Property<string>("TenThongTinDieuChinh")
                         .HasColumnType("text");
 
                     b.HasKey("Id");
@@ -229,23 +232,26 @@ namespace tramcan2.Migrations
                     b.Property<string>("ChatLuongHH")
                         .HasColumnType("text");
 
-                    b.Property<string>("Date")
-                        .HasColumnType("text");
+                    b.Property<float>("DonGia")
+                        .HasColumnType("real");
 
                     b.Property<string>("GhiChu")
                         .HasColumnType("text");
 
-                    b.Property<string>("KhacHang")
+                    b.Property<string>("KhachHang")
                         .HasColumnType("text");
 
                     b.Property<string>("KhoHang")
                         .HasColumnType("text");
 
-                    b.Property<double>("KhoiLuongL1")
-                        .HasColumnType("double precision");
+                    b.Property<float>("KhoiLuongHang")
+                        .HasColumnType("real");
 
-                    b.Property<double>("KhoiLuongL2")
-                        .HasColumnType("double precision");
+                    b.Property<float>("KhoiLuongL1")
+                        .HasColumnType("real");
+
+                    b.Property<float>("KhoiLuongL2")
+                        .HasColumnType("real");
 
                     b.Property<string>("KieuCan")
                         .HasColumnType("text");
@@ -253,13 +259,19 @@ namespace tramcan2.Migrations
                     b.Property<string>("LoaiHang")
                         .HasColumnType("text");
 
-                    b.Property<string>("Ma")
-                        .HasColumnType("text");
-
-                    b.Property<string>("Name")
-                        .HasColumnType("text");
-
                     b.Property<string>("NguonGoc")
+                        .HasColumnType("text");
+
+                    b.Property<string>("TenLaixe")
+                        .HasColumnType("text");
+
+                    b.Property<float>("ThanhTien")
+                        .HasColumnType("real");
+
+                    b.Property<string>("ThoiGianCanL1")
+                        .HasColumnType("text");
+
+                    b.Property<string>("ThoiGianCanL2")
                         .HasColumnType("text");
 
                     b.HasKey("Id");

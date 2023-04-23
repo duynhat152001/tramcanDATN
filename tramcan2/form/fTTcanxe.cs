@@ -48,8 +48,6 @@ namespace tramcan2.form
         {
             textBox_khachhang.DataBindings.Clear();
             textBox_khachhang.DataBindings.Add(new Binding("Text", comboBox2.DataSource, "TenKhachHang"));
-            
-
         }
 
       
@@ -57,6 +55,8 @@ namespace tramcan2.form
         {
             textBox_loaihang.DataBindings.Clear();
             textBox_loaihang.DataBindings.Add(new Binding("Text", comboBox_loaihang.DataSource, "TenLoaiHang"));
+            textBox_donGia.DataBindings.Clear();
+            textBox_donGia.DataBindings.Add(new Binding("Text", comboBox_loaihang.DataSource, "DonGia"));
         }
 
         private void comboBox_khohang_SelectedValueChanged(object sender, EventArgs e)
@@ -75,6 +75,24 @@ namespace tramcan2.form
         {
             textBox_chatluong.DataBindings.Clear();
             textBox_chatluong.DataBindings.Add(new Binding("Text", comboBox_chatluong.DataSource, "TenChatLuongHangHoa"));
+        }
+
+       
+
+        
+        private void comboBox_biensotruoc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            textBox_bienso1.DataBindings.Clear();
+            textBox_bienso1.DataBindings.Add(new Binding("Text", comboBox_biensotruoc.DataSource, "BienSoDauXe"));
+            textBox_bienso2.DataBindings.Clear();
+            textBox_bienso2.DataBindings.Add(new Binding("Text", comboBox_biensotruoc.DataSource, "BienSoCuoiXe"));
+            textBox_tenlaixe.DataBindings.Clear();
+            textBox_tenlaixe.DataBindings.Add(new Binding("Text", comboBox_biensotruoc.DataSource, "TenChuXe"));
+            textBox_CMND.DataBindings.Clear();
+            textBox_CMND.DataBindings.Add(new Binding("Text", comboBox_biensotruoc.DataSource, "CMND"));
+            textBox_KL1.DataBindings.Clear();
+            textBox_KL1.DataBindings.Add(new Binding("Text", comboBox_biensotruoc.DataSource, "TrongTai"));
         }
 
         private void comboBox2_Click(object sender, EventArgs e)
@@ -112,6 +130,15 @@ namespace tramcan2.form
             comboBox_chatluong.DataSource = CLHH.ToList();
             comboBox_chatluong.DisplayMember = "TenChatLuongHangHoa";
         }
+        
+
+        
+        private void comboBox_biensotruoc_Click(object sender, EventArgs e)
+        {
+            var biensodau = from c in db.vehicles select c;
+            comboBox_biensotruoc.DataSource = biensodau.ToList();
+            comboBox_biensotruoc.DisplayMember = "id";
+        }
 
         private void button4_Click(object sender, EventArgs e)  //btm them
         {
@@ -129,8 +156,8 @@ namespace tramcan2.form
                     ChatLuongHH = textBox_chatluong.Text,
                     BienSoDauXe = textBox_bienso1.Text,
                     BienSoDuoiXe = textBox_bienso2.Text,
-                    KhoiLuongL1 = double.Parse(textBox_KL1.Text),
-                    KhoiLuongL2 = double.Parse(textBox_KL2.Text),
+                    KhoiLuongL1 = float.Parse(textBox_KL1.Text),
+                    KhoiLuongL2 = float.Parse(textBox_KL2.Text),
                     ThoiGianCanL1 = DateTime.Now.ToString("dd/MM/yyyy"),
                     
                 };
@@ -169,9 +196,10 @@ namespace tramcan2.form
 
                             TTCanXe ttcan = db.tTCanXes.Find(SoPhieu);
 
-                            ttcan.KhoiLuongL2 = double.Parse(textBox_KL2.Text);
+                            ttcan.KhoiLuongL2 = float.Parse(textBox_KL2.Text);
                             ttcan.ThoiGianCanL2 = DateTime.Now.ToString("dd/MM/yyyy"); 
-                            ttcan.KhoiLuongHang = double.Parse(textBox_KLHang.Text);
+                            ttcan.KhoiLuongHang = float.Parse(textBox_KLHang.Text);
+                            ttcan.ThanhTien = float.Parse(textBox_Thanhtien.Text);
 
 
                             if (ttcan != null)
@@ -180,7 +208,7 @@ namespace tramcan2.form
                                 MessageBox.Show("Lời Nhắc: " + "thêm số kg lần 2 thành công", "Lời nhắc", MessageBoxButtons.OK, MessageBoxIcon.Information);
                                 solancanL2 += 1;
                                 label_solancanL2.Text = solancanL2.ToString();
-                                label_chocanL2.Text = (solancanL2-solancanL1).ToString();
+                                label_chocanL2.Text = (solancanL1-solancanL2).ToString();
                                 loadata();
                                 
                             }
@@ -281,7 +309,8 @@ namespace tramcan2.form
         private void textBox_ghisocan_TextChanged(object sender, EventArgs e)
         {
 
-            ChonCheDoCan();
+                ChonCheDoCan();
+ 
         }
 
         public void ChonCheDoCan()
@@ -296,9 +325,18 @@ namespace tramcan2.form
                 {
                     textBox_KL2.Text = textBox_ghisocan.Text;
                     
-                        float KL_Hang2 = float.Parse(textBox_KL2.Text);
-                        float KL_Hang1 = float.Parse(textBox_KL1.Text);
+                    float KL_Hang2 = float.Parse(textBox_KL2.Text);
+                    float KL_Hang1 = float.Parse(textBox_KL1.Text);
+
+                    if(KL_Hang1>=KL_Hang2)
+                    {
+                        //MessageBox.Show("Cảnh báo: " + "Khối lượng L2 không nhỏ hơn Khối lượng L1" , "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }     
+                    else
+                    {
                         textBox_KLHang.Text = (KL_Hang2 - KL_Hang1).ToString();
+                    }                        
+                    
                 }
             }
             catch(Exception ex)
@@ -394,19 +432,25 @@ namespace tramcan2.form
         {
             try
             {
-                if (textBox_donGia.Text != null && float.Parse(textBox_donGia.Text) > 0)
+                if (textBox_donGia.Text != null && float.Parse(textBox_donGia.Text) >= 0)
                 {
                     var sum = (float.Parse(textBox_KLHang.Text)) * (float.Parse(textBox_donGia.Text));
                     textBox_Thanhtien.Text = sum.ToString();
                 }
                 else
+                {
                     textBox_Thanhtien.Text = "0";
-
+                    textBox_donGia.Text = "0";
+                    MessageBox.Show("Cảnh báo: " + "Đơn Giá không được âm", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);     
+                }    
             }
             catch (Exception ex)
             {
                 //MessageBox.Show("Lỗi: " + "" + ex.ToString(), "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+       
     }
 }
+// test moi nekkk
