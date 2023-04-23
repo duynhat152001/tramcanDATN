@@ -18,5 +18,7 @@ namespace tramcan2.models
         public DateTime DateTimeTo { get; set; }
         public string GhiChu { get; set; }
         
+        // ghichu
+        
     }
 }
