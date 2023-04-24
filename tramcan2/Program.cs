@@ -17,7 +17,7 @@ namespace tramcan2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fKhachHang());
+            Application.Run(new fMain());
         }
     }
 }

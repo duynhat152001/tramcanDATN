@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-
+//using tramcan2.Migrations;
 
 namespace tramcan2.models
 {
@@ -22,9 +22,9 @@ namespace tramcan2.models
        public DbSet<ChatLuongHangHoa> chatLuongHangHoas { get; set; }
        public DbSet<TramCan> tramCans { get; set; }
        public DbSet<TTCanXe> tTCanXes { get; set; }
+       public DbSet<Baocao> baocaos { get; set; }
 
-
-        private const string conn = (@"server=localhost;Port=5432;User Id=postgres;Password=Tranduynhat152001;Database=mydbCan3");
+        private const string conn = (@"server=localhost;Port=5432;User Id=postgres;Password=minhquy2001;Database=tramcan");
 
         public CanDbcontext()
         {
