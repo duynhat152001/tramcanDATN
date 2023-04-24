@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using tramcan2.Migrations;
+//using tramcan2.Migrations;
 using tramcan2.models;
 using NinjaNye.SearchExtensions;
 
@@ -450,7 +450,30 @@ namespace tramcan2.form
             }
         }
 
-       
+        private void btn_inphieu_Click(object sender, EventArgs e)
+        {
+            Baocao baocao = new Baocao()
+            {
+                TenLaixe = textBox_tenlaixe.Text,
+                KhachHang = textBox_khachhang.Text,
+                LoaiHang = textBox_loaihang.Text,
+                NguonGoc = textBox_nguongoc.Text,
+                KhoHang = textBox_khohang.Text,
+                KieuCan = comboBox_kieucan.Text,
+                ChatLuongHH = textBox_chatluong.Text,
+                BienSoDauXe = textBox_bienso1.Text,
+                BienSoDuoiXe = textBox_bienso2.Text,
+                KhoiLuongL1 = float.Parse(textBox_KL1.Text),
+                KhoiLuongL2 = float.Parse(textBox_KL2.Text),
+                ThoiGianCanL1 = DateTime.Now.ToString("dd/MM/yyyy"),
+            };
+            db.baocaos.Add(baocao);
+            db.SaveChanges();
+            fReport report = new fReport();
+            report.ShowDialog();
+            db.Remove(baocao);
+            db.SaveChanges();
+        }
     }
 }
 // test moi nekkk

@@ -109,6 +109,24 @@
     <Reference Include="Microsoft.Extensions.Primitives, Version=3.1.32.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Extensions.Primitives.3.1.32\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1537.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="NinjaNye.SearchExtensions, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\NinjaNye.SearchExtensions.3.0.1\lib\net45\NinjaNye.SearchExtensions.dll</HintPath>
     </Reference>
@@ -222,6 +240,12 @@
     <Compile Include="form\fNguonGocHangHoa.Designer.cs">
       <DependentUpon>fNguonGocHangHoa.cs</DependentUpon>
     </Compile>
+    <Compile Include="form\fReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form\fReport.Designer.cs">
+      <DependentUpon>fReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="form\fTTcanxe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -246,47 +270,12 @@
     <Compile Include="form\fVehicle.Designer.cs">
       <DependentUpon>fVehicle.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\20230413065644_ttcanxems7.cs" />
-    <Compile Include="Migrations\20230413065644_ttcanxems7.designer.cs">
-      <DependentUpon>20230413065644_ttcanxems7.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20230413093745_kieucan.cs" />
-    <Compile Include="Migrations\20230413093745_kieucan.designer.cs">
-      <DependentUpon>20230413093745_kieucan.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20230418023639_capnhat.cs" />
-    <Compile Include="Migrations\20230418023639_capnhat.designer.cs">
-      <DependentUpon>20230418023639_capnhat.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20230420075923_themcolum.cs" />
-    <Compile Include="Migrations\20230420075923_themcolum.designer.cs">
-      <DependentUpon>20230420075923_themcolum.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20230420082450_themcolumdogiathanhtien.cs" />
-    <Compile Include="Migrations\20230420082450_themcolumdogiathanhtien.designer.cs">
-      <DependentUpon>20230420082450_themcolumdogiathanhtien.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20230421085932_modifiTypedata.cs" />
-    <Compile Include="Migrations\20230421085932_modifiTypedata.designer.cs">
-      <DependentUpon>20230421085932_modifiTypedata.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20230421100020_modifikhohang.cs" />
-    <Compile Include="Migrations\20230421100020_modifikhohang.designer.cs">
-      <DependentUpon>20230421100020_modifikhohang.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20230422042708_reqiured.cs" />
-    <Compile Include="Migrations\20230422042708_reqiured.designer.cs">
-      <DependentUpon>20230422042708_reqiured.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20230422052552_vehicle.cs" />
-    <Compile Include="Migrations\20230422052552_vehicle.designer.cs">
-      <DependentUpon>20230422052552_vehicle.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\20230422053825_vehicle1.cs" />
-    <Compile Include="Migrations\20230422053825_vehicle1.designer.cs">
-      <DependentUpon>20230422053825_vehicle1.cs</DependentUpon>
+    <Compile Include="Migrations\20230424040416_report.cs" />
+    <Compile Include="Migrations\20230424040416_report.designer.cs">
+      <DependentUpon>20230424040416_report.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\CanDbcontextModelSnapshot.cs" />
+    <Compile Include="models\BaoCao.cs" />
     <Compile Include="models\CanDbcontext.cs" />
     <Compile Include="models\CaTruc.cs" />
     <Compile Include="models\ChatLuongHangHoa.cs" />
@@ -302,6 +291,7 @@
     <Compile Include="models\Vehicle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <EmbeddedResource Include="fLogin.resx">
       <DependentUpon>fLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -326,6 +316,9 @@
     <EmbeddedResource Include="form\fNguonGocHangHoa.resx">
       <DependentUpon>fNguonGocHangHoa.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="form\fReport.resx">
+      <DependentUpon>fReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="form\fTTcanxe.resx">
       <DependentUpon>fTTcanxe.cs</DependentUpon>
     </EmbeddedResource>
@@ -348,7 +341,11 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report.rdlc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\tramcan2.models.Baocao.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -395,6 +392,22 @@
   <ItemGroup>
     <None Include="Resources\add.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
