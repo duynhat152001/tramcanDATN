@@ -168,6 +168,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="API\Account.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="fLogin.cs">
       <SubType>Form</SubType>
     </Compile>
